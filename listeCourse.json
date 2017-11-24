@@ -1,0 +1,16 @@
+{
+    "nom": "nom de course",
+    "uuid": "649959c1-08ec-4f5e-aafd-92aed60e01e4",
+    "articles": [
+        {
+            "nom": "nom de l'article",
+            "etat": true,
+            "uuid": "07c7f72e-4572-4940-ad8e-9ce806efe7ee"
+        },
+        {
+            "nom": "nom du deuxieme article",
+            "etat": false,
+            "uuid": "e1f8f2d7-8a4e-4eb9-8eab-96d2683f386d"
+        }
+    ]
+}
