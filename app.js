@@ -8,7 +8,8 @@ app.get('/', (req, res) => {
 })
 
 app.post('/liste-course', (req, res) => {
-    console.log(req.body);
+  console.log(req.name)
+    listeCourse.createListCourseWithName(req.body.name)
 })
 
 app.listen(PORT)
