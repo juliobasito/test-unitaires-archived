@@ -17,7 +17,7 @@ var listeCourse = {
     addCourseToListWithName: function(name_list, name_entity) {
       data.forEach(function(item, index, object) {
         if (item.name === name_list) {
-            item.courses.push({"course": name_entity})
+            item.courses.push({"course": name_entity, "bought": false})
         }
       })
     },
@@ -25,8 +25,19 @@ var listeCourse = {
     getCoursesWithListName: function(list_name) {
       data.forEach(function(item, index, object) {
         if (item.name === list_name) {
-          console.log("voila mes courses", item.courses)
-          return item.courses.json()
+          return item.courses
+        }
+      })
+    },
+
+    boughtAnItemFromList(list_name, list_item) {
+      data.forEach(function(list, data, object) {
+        if (list.name === list_name) {
+          list.courses.forEach(function(item, data, object) {
+            if (item.course === list_item) {
+              item.bought = true;
+            }
+          })
         }
       })
     },
